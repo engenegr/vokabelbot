@@ -5,7 +5,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import pydeepl
 import configparser
 
-cfg = configparser.Configparser()
+cfg = configparser.ConfigParser()
 cfg.read('settings.ini')
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
