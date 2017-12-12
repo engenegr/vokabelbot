@@ -91,6 +91,9 @@ def translate(text, user):
     trans1 = pydeepl.translate(text, lan1, lan2)
     trans2 = pydeepl.translate(text, lan2, lan1)
     # TODO: logic depends on user.direction
+    user.count += 1
+    session.add(user)
+    session.commit()
     if user.direction == 1:
         return [trans1]
     elif user.direction == 2:

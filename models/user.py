@@ -20,11 +20,12 @@ class User(Base):
     name = Column(String(250), nullable=False)  # required
     date_join = Column(DateTime(), default=dt.datetime.now())
     date_active = Column(DateTime(), default=dt.datetime.now())
-    lan1 = Column(String(10), default='de')
+    lan1 = Column(String(10), default='de')  # also interface language or 'en'
     lan2 = Column(String(10), default='en')
     direction = Column(Integer(), default=3)  # 1 (1->2) 2 (2->1) 3 auto
     direction_train = Column(Integer(), default=3) # as above 3 = mixed
     confirm = Column(Boolean, default=False)  # y/n button to add to dict
     translator_id = Column(Integer, ForeignKey('translator.id'))
     translator = relationship(Translator)
+    count = Column(Integer(), default=0)
 
