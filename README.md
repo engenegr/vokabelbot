@@ -16,4 +16,4 @@ Schritte zu beachten:
 * Python3 muss installiert sein
 * python-telegram-bot und pydeepl pakete können via pip installiert werden
 * Ein token vom BotFather
-* Eine settings.ini Datei mit Strings und token (Example)
+* Eine settings.ini Datei aus der default-settings.ini erstellen
