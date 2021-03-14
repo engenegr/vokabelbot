@@ -15,8 +15,8 @@ import datetime as dt
 
 class Card(Base):
     __tablename__ = 'card'
-    user_id = Column(Integer(), ForeignKey(User))
-    user = relationship(User)
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer(), ForeignKey('user.id'))
     date = Column(DateTime(), default=dt.datetime.now())
     date_active = Column(DateTime(), default=dt.datetime.now())
     lan1 = Column(String(20))

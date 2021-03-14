@@ -13,6 +13,7 @@ Base = declarative_base()  # declare Base before importing models since they inh
 
 from models.translator import Translator
 from models.user import User
+from models.card import Card
 
 #declare engine and session (create/modify db if not exists)
 engine = create_engine('sqlite:///models/sql.db')
